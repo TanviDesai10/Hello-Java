@@ -5,6 +5,12 @@ import java.util.Scanner;
 
         String name = "Tanvi";
         System.out.println("Hello world" + name);
+        System.out.print("Enter a number : ");
+        int a= scanner.nextInt();
+        System.out.print("Enter a second Number : ");
+        int b= scanner.nextInt();
+
+        System.out.println(" Addition " + (a+b));
 
         scanner.close();
 
