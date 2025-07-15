@@ -1,21 +1,27 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
-    public class Main {
-    public static void main(String[] args){
+public class Main{
+    public static void main(String[]args){
+
+        //compound interest calculator
         Scanner scanner = new Scanner(System.in);
 
-        String name = "Tanvi";
-        System.out.println("Hello world" + name);
-        System.out.print("Enter a number : ");
-        int a= scanner.nextInt();
-        System.out.print("Enter a second Number : ");
-        int b= scanner.nextInt();
-
-        System.out.println(" Addition " + (a+b));
+        double principal;
+        double rate;
+        int timesCompounded;
+        int years;
+        double amount;
+        System.out.print("Enter the principal amount: ");
+        principal= scanner.nextDouble();
+        System.out.print(" Enter the interest rate (in % ):");
+        rate= scanner.nextDouble() / 100;
+        System.out.print(" Enter the # of times Compounded per year: ");
+        timesCompounded= scanner.nextInt();
+        System.out.print("Enter the # of years: ");
+        years= scanner.nextInt();
+        amount = principal * Math.pow(1 + rate / timesCompounded, timesCompounded * years);
+        System.out.printf(" The amount after %d years is $%f", years , amount);
 
         scanner.close();
-
-
-
-
     }
 }
